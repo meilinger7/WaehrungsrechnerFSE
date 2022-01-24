@@ -20,8 +20,8 @@ public class App
         eur2usd.setNext(eur2ats);
         eur2ats.setNext(eur2yen);
 
-        System.out.println(eur2yen.umrechnen("USD", 10.0));
-        System.out.println(eur2usd.umrechnen("YEN", 10.0));
+        System.out.println(eur2yen.umrechnen("ATS", 10.0));
+        System.out.println(eur2usd.umrechnen("ATS", 10.0));
         System.out.println(eur2ats.umrechnen("ATS", 10.0));
 
 
