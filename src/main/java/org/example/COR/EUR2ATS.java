@@ -9,9 +9,6 @@ public class EUR2ATS extends WR {
         if (variante == "ATS"){
             return betrag * 13.76;
         }
-        else {
-            this.next = new EUR2YEN();
-            return next.umrechnen(variante, betrag);
-        }
+       return super.umrechnen(variante, betrag);
     }
 }

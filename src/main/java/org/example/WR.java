@@ -8,6 +8,8 @@ public abstract class WR implements IUmrechnen{
         this.next = next;
     }
 
-    public abstract double umrechnen(String variante, double betrag);
+    public double umrechnen(String variante, double betrag){
+        return next.umrechnen(variante, betrag);
+    }
 
 }

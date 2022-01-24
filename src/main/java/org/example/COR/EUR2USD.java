@@ -9,9 +9,6 @@ public class EUR2USD extends WR {
         if (variante == "USD"){
             return betrag * 1.13;
         }
-        else {
-            this.next = new EUR2ATS();
-            return next.umrechnen(variante, betrag);
-        }
+        return super.umrechnen(variante, betrag);
     }
 }

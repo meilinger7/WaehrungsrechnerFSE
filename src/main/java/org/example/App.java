@@ -16,6 +16,9 @@ public class App
         WR eur2usd = new EUR2USD();
         WR eur2ats = new EUR2ATS();
 
+        eur2yen.setNext(eur2usd);
+        eur2usd.setNext(eur2ats);
+        eur2ats.setNext(eur2yen);
 
         System.out.println(eur2yen.umrechnen("USD", 10.0));
         System.out.println(eur2usd.umrechnen("YEN", 10.0));

@@ -1,3 +1,4 @@
 # WaehrungsrechnerFSE
 
-much du kek
+Wie nennt man es, wenn ein Chinese Verstopfung hat?
+Reisverschluss
