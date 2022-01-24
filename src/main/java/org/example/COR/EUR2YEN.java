@@ -9,6 +9,7 @@ public class EUR2YEN extends WR {
             return betrag * 129;
         }
         else {
+            this.next = new EUR2USD();
             return next.umrechnen(variante, betrag);
         }
     }

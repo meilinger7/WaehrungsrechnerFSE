@@ -10,6 +10,7 @@ public class EUR2ATS extends WR {
             return betrag * 13.76;
         }
         else {
+            this.next = new EUR2YEN();
             return next.umrechnen(variante, betrag);
         }
     }

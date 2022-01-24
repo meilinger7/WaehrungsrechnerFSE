@@ -12,15 +12,15 @@ public class App
 {
     public static void main( String[] args )
     {
-        EUR2YEN eur2yen = new EUR2YEN();
-        EUR2USD eur2usd = new EUR2USD();
-        EUR2ATS eur2ats = new EUR2ATS();
-
-        eur2yen.setNext(eur2usd);
-        eur2usd.setNext(eur2ats);
+        WR eur2yen = new EUR2YEN();
+        WR eur2usd = new EUR2USD();
+        WR eur2ats = new EUR2ATS();
 
 
-        System.out.println(eur2yen.umrechnen("ATS", 10.0));
+        System.out.println(eur2yen.umrechnen("USD", 10.0));
+        System.out.println(eur2usd.umrechnen("YEN", 10.0));
+        System.out.println(eur2ats.umrechnen("ATS", 10.0));
+
 
     }
 }
