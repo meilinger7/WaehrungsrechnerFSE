@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class WR implements IUmrechnen{
+public abstract class WR implements IUmrechnen {
 
     protected WR next;
 
@@ -8,14 +8,18 @@ public abstract class WR implements IUmrechnen{
         this.next = next;
     }
 
-    public final double umrechnen(String variante, double betrag){
-        if(this.next.check(variante)){
-            return this.next.rechnen(betrag);
+    public double umrechnen(String variante, double betrag) {
+        if (next != null) {
+            if (this.next.check(variante)) {
+                return this.next.rechnen(betrag);
+            }
+            return next.umrechnen(variante, betrag);
         }
-        return next.umrechnen(variante, betrag);
+        return -1;
     }
 
     public abstract double rechnen(double betrag);
+
     public abstract boolean check(String variante);
 
 }

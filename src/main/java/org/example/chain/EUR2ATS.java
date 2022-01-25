@@ -1,4 +1,4 @@
-package org.example.COR;
+package org.example.chain;
 
 import org.example.WR;
 
