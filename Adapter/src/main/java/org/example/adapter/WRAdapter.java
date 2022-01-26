@@ -8,22 +8,18 @@ import org.example.chain.EUR2YEN;
 
 public class WRAdapter implements ISammelumrechnung {
     double dSum;
+    WR wr;
+
+    public WRAdapter(WR wr){
+        this.wr = wr;
+    }
+
 
     @Override
     public double sammelumrechnen(double[] betraege, String variante) {
-
-        WR eur2yen = new EUR2YEN();
-        WR eur2usd = new EUR2USD();
-        WR eur2ats = new EUR2ATS();
-
-        eur2yen.setNext(eur2usd);
-        eur2usd.setNext(eur2ats);
-        eur2ats.setNext(eur2yen);
-
         for (double betrag : betraege){
-            dSum += betrag;
+            dSum += wr.umrechnen(variante, betrag);
         }
-
-        return eur2yen.umrechnen(variante, dSum);
+        return dSum;
     }
 }

@@ -10,6 +10,7 @@ public class ProzentDecorator extends WRDecorator{
 
     @Override
     public double umrechnen(String variante, double betrag) {
+
         return decoratedWr.umrechnen(variante,betrag*1.05);
     }
 

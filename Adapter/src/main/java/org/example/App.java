@@ -8,6 +8,7 @@ import org.example.decorator.BetragDecorator;
 import org.example.decorator.ProzentDecorator;
 import org.example.decorator.WRDecorator;
 
+
 /**
  * Hello world!
  *
@@ -41,8 +42,8 @@ public class App
         System.out.println("-----------------");
 
         double[] arrData = {10, 20, 5, 100};
-        WRAdapter wrAdapter = new WRAdapter();
-        System.out.println(wrAdapter.sammelumrechnen(arrData, "USD"));
+        WRAdapter wrAdapter = new WRAdapter(eur2yen);
+        System.out.println(wrAdapter.sammelumrechnen(arrData, "ATS"));
 
     }
 }
