@@ -19,7 +19,6 @@ public abstract class WR implements IUmrechnen {
     }
 
     public abstract double rechnen(double betrag);
-
     public abstract boolean check(String variante);
 
 }

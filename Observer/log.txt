@@ -1,0 +1,7 @@
+
+---------------------- LOG eintrag ----------------------
+{variante=ATS, ausgangsbetrag=10.0, time=2022.02.01.20.44.36, calculated=140.0}
+---------------------- LOG eintrag ----------------------
+{variante=ATS, ausgangsbetrag=10.0, time=2022.02.01.20.45.32, calculated=140.0}
+---------------------- LOG eintrag ----------------------
+{variante=ATS, ausgangsbetrag=10.0, time=2022.02.01.20.46.48, calculated=140.0}

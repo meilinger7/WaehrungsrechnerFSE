@@ -7,6 +7,7 @@ import org.example.chain.EUR2YEN;
 import org.example.decorator.BetragDecorator;
 import org.example.decorator.ProzentDecorator;
 import org.example.decorator.WRDecorator;
+import org.example.myObserver.MyObserver;
 
 
 /**
@@ -31,23 +32,30 @@ public class App
         double[] arrData = {10, 20, 5, 100};
         WRAdapter wrAdapter = new WRAdapter(eur2yen);
 
-        /*
+
         System.out.println(eur2yen.umrechnen("ATS", 10.0));
 
         System.out.println("----------------");
 
 
+/*
         System.out.println(eur2yenBeitragDecorator.umrechnen("YEN", 5));
 
 
         System.out.println(eur2yenProzentDecorator.umrechnen("USD", 10));
 
         System.out.println("-----------------");
-*/
+
         System.out.println(wrAdapter.sammelumrechnen(arrData, "ATS"));
 
         System.out.println("-----------------");
+*/
+        MyObserver observer = new MyObserver();
+        eur2ats.addObserver(observer);
+        eur2usd.addObserver(observer);
+        eur2yen.addObserver(observer);
 
+        System.out.println(eur2yen.umrechnen("ATS", 10.0));
 
 
 
